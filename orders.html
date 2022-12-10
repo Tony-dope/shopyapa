@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="bs.css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons-1.9.0/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/247c0906af.js" crossorigin="anonymous"></script>
+    <title>My orders</title>
+    <style>
+      #more{
+        display: none;
+      }
+      .glow{
+          color: #fff;
+          text-align: center;
+         -webkit-animation: glow 1s ease-in-out infinite alternate;
+         -moz-animation: glow 1s ease-in-out infinite alternate;
+         animation: glow 1s ease-in-out infinite alternate;
+        }
+        @-webkit-keyframes glow {
+         from {
+         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+          }
+  
+         to {
+         text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+         }
+        }
+  </style>
+</head>
+<body>
+    <nav class="navbar w3-purple navbar-expand-xl fixed-top">
+        <div class="container">
+          <a class="navbar-brand w3-text-white me-5" href="shopyapa.html"><h2><strong>SHOPYAPA🛒</strong></h2></a>
+          <!--button for mobile nav-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--navlinks-->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex ms-5 me-5" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search in shopyapa" aria-label="Search">
+            <button class="btn btn-sm btn-outline-dark" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav ms-3 mb-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle w3-text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><h6>
+                 👨Account
+              </h6></a>
+              <ul class="dropdown-menu w3-aqua w3-hover-purple">
+                <li><a class="dropdown-item w3-text-white" href="#">🔑Sign-in</a></li>
+                <li><a class="dropdown-item w3-text-white" href="#">✨New Account</a></li>
+                <li><a class="dropdown-item w3-text-white" href="#"> 📞Orders</a></li>
+              </ul>
+            </li>
+            <!--leftsidebar-->
+            <li class="nav-item">
+              <a href="#cate" class=" nav-link  w3-text-white" data-bs-toggle="offcanvas"
+              role="button" aria-controls="cate" >
+              <h6>📜Categories</h6></a>
+            </li>
+            <!--MODAL-->
+            <li class="nav-item">
+              <a href="#help" class="nav-link w3-text-white" data-bs-toggle="modal"><h6>🤔Help</h6></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link w3-text-white"><H6>📣My Orders</H6></a>
+            </li>
+          </ul>
+         </div>
+        </div>
+    </nav>
+ <!--categories/sidebar-->
+  <section>
+    <div class="offcanvas offcanvas-end w3-blue-gray w3-text-white w3-hover-purple" tabindex="-1" id="cate" aria-labelledby="cateLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title"id="cate-label"><strong>Browse Through Your Preference </strong></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <br>
+      <br>
+      <div class="offcanvas-body p-4">
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="bi bi-tv-fill"></i></span>
+          Electronics</a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="fa-solid fa-shirt"></i></span> Clothing
+        </a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="fa-solid fa-baby-carriage"></i> Baby Items</span>
+        </a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="fa-solid fa-chair"></i>Furniture</span>
+        </a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="bi bi-phone-fill"></i>Phones and Accessories</span>
+        </a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="bi bi-house-fill"></i>Home and Office</span>
+        </a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="bi bi-pc-display"></i></span>Computers
+        </a></h4>
+        <hr>
+        <h4><a href="#" class="w3-text-white text-decoration-none">
+          <span><i class="bi bi-bag-heart-fill"></i></span>Market
+        </a></h4>
+      </div>
+    </div>
+
+  </section>
+  <!--help modal-->
+  <section>
+    <div class="modal fade" id="help" tabindex="-1" aria-labelledby="modal-title"
+    aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content w3-purple">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Having Pressing Concerns</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Send in your Email to our team and your concern will be addressed at lightening speed</p>
+                    <label for="modal email" class="form-label">Your email address:</label>
+                    <input type="text" class="form-control" id="modal-email" placeholder="e.g. dope@gmail.com">
+                    <br>
+                    <p>Or</p>
+                    <p>Send us a ping via Whatsapp @+2347037060242</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn w3-border w3-border-purple w3-hover-white">submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!--empty cart-->
+  <section class="p-5 shadow w3-purple">
+    <div class="container">
+        <div class="d-flex p-3 p-lg-5 justify-content-center">
+          <div><img src="pics/cart.svg" alt="cart"></div>
+        </div>
+        <h6 class="text-center pb-lg-5">Your cart is empty at the moment 🤔</h6>
+        <p class="text-center">Browse through the categories to get the best deals</p>
+    </div>
+  </section>
+  <hr>
+  <section class="bg-dark">
+    <footer class="container">
+      <h2 class="text-center text-light pt-3">SHOP WITH SHOPYAPA</h2>
+      <article class="p-5 pt-2 text-light"> Here at <strong class="glow">SHOPYAPA</strong> we derive pleasure in giving the best of services to our customers, both sellers and buyers alike,<span id="dots">...</span><span id="more">so when you come here with the need to satisfy a want we want you to be rest assured that as far as it is to your liking and our standards then you will have no issue getting what you want.
+      <br> Please be rest assured that what ever you orderon our site willbe delivered to you at <strong>1 week</strong> maximum, and if the product you ordered is not up to your standard then you can check on our return policy <a href="#" class="text text-decoration-underline">HERE</a>. All in All we wish you a blissful shopping and happy buying😋</span></article>
+      <button onclick="myFunction()" id="myBtn" class="btn-sm w3-round w3-border w3-border-purple w3-hover-purple"><strong>Read More</strong></button>
+      <hr>
+      <div class="p-3">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h1 class="text-light glow"><strong>SHOPYAPA</strong><SUP class="fw-lighter">TM</SUP></h1>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="fw-bolder ms-md-4 text-light">Follow us</h6>
+            <ul style="list-style-type:none;">
+              <li>
+                <a href="#" class="text-decoration-none w3-hover-text-white"><i class="bi bi-instagram "></i><em>INSTAGRAM</em></a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none w3-hover-text-white"><i class="bi bi-twitter"></i>TWITTER</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none w3-hover-text-white"><i class="bi bi-facebook"></i>FACEBOOK</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="text-light ">MAKE MONEY WITH US</h6>
+            <ul style="list-style: none;">
+              <li>
+                <a href="#" class="text-decoration-none w3-hover-text-white">BECOME A SELLER</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none w3-hover-text-white">BECOME AN AGENT</a>
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none w3-hover-text-white">PARTNER WITH US</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+   </section>
+   <hr>
+   <div class="w3-purple p-5">
+    <p class="text-center">THIS IS A DUMMY WEBSITE BEWARE OF ACTUAL PURCHASE © 2022 <strong>SHOPYAPA</strong></p>
+    <p class="text-center">Special thanks to <a href="https://www.jumia.com">JUMIA</a>for their website insite</p>
+  </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/w3.js"></script>
+    <script>
+      function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+  
+      if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+     }
+   </script>
+</body>
+</html>
